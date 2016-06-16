@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Polymer webcomponents in Angular2</title>
+    <!-- Libraries -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/upgrade.dev.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Polymer Script -->
+    <script>
+        window.Polymer = window.Polymer || {};
+        window.Polymer.dom = 'shadow';
+    </script>
+
+    <!-- Polymer imports -->
+    <link rel="import" href="bower_components/google-map/google-map.html">
+    <link rel="import" href="bower_components/google-map/google-map-marker.html">
+        <link rel="import" href="bower_components/google-map/google-map-poly.html">
+            <link rel="import" href="bower_components/google-map/google-map-point.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+
+    <script>
+        System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app.js')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+
+
+    <my-google-comp></my-google-comp>
+
+
+</body>
+
+</html>

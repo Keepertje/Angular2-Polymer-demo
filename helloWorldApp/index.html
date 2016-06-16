@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Polymer webcomponents in Angular2</title>
+   
+    <!-- Libraries --> 
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/upgrade.dev.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+      
+    <!-- Angular2 script --> 
+    <script>
+        System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app.js')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+
+
+    <my-google-comp></my-google-comp>
+
+
+</body>
+
+</html>
